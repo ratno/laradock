@@ -25,7 +25,8 @@ $env = str_replace([
     "POSTGRES_DB=default",
     "POSTGRES_USER=default",
     "POSTGRES_PASSWORD=secret",
-
+    "WORKSPACE_INSTALL_OCI8=false",
+    "PHP_FPM_INSTALL_OCI8=false"
 ],[
     "DATA_PATH_HOST=~/.laradock/{$project}",
     "COMPOSE_PROJECT_NAME={$project}",
@@ -41,6 +42,8 @@ $env = str_replace([
     "POSTGRES_DB=appdb",
     "POSTGRES_USER=ratno",
     "POSTGRES_PASSWORD=ratno",
+    "WORKSPACE_INSTALL_OCI8=true",
+    "PHP_FPM_INSTALL_OCI8=true"
 ],$env);
 
 $fenv = fopen(".env","w+");
